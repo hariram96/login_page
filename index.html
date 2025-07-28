@@ -13,8 +13,23 @@
       !function(h,i,d,e){var  t,n=h.createElement("style");n.id=e,n.innerHTML="body{opacity:0}",h.head.appendChild(n),t=d,i.rmfk=function(){var  t=h.getElementById(e);t&&t.parentNode.removeChild(t)},setTimeout(i.rmfk,t)}(document,window,timeout,"abhide");
     </script>
 
-<!-- Mida A/B Testing Script -->
-<script type="text/javascript" async src="https://cdn.mida.so/js/optimize.js?key=3Ejq4KNndxLmLdJyArpv7b&cookie=1"></script>
+<<!-- Everloop SDK Loader -->
+    <script>
+    const style = document.createElement("style");
+    style.innerHTML = "body { opacity: 0 !important; }";
+    const cfhide = () => document.head.appendChild(style);
+    const cfshow = () => style.remove();
+    cfhide();
+    setTimeout(cfshow, 2000);
+    document.addEventListener("everloop:show", cfshow);
+    window.EFQ = window.EFQ || [];
+    window.EFQ.push({
+      config: {
+        projectId: "ArvwzHsm3emGap3T",
+      },
+    });
+    </script>
+    <script async src="https://cdn-prod.geteverloop.com/everloop.min.js?project_id=ArvwzHsm3emGap3T"></script>
     <!-- favicon -->
     <link rel="shortcut icon" href="plugin/favicon.png">
 
