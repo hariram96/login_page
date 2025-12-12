@@ -13,23 +13,25 @@
       !function(h,i,d,e){var  t,n=h.createElement("style");n.id=e,n.innerHTML="body{opacity:0}",h.head.appendChild(n),t=d,i.rmfk=function(){var  t=h.getElementById(e);t&&t.parentNode.removeChild(t)},setTimeout(i.rmfk,t)}(document,window,timeout,"abhide");
     </script>
 
-<!-- Everloop SDK Loader -->
-    <script>
-    const style = document.createElement("style");
-    style.innerHTML = "body { opacity: 0 !important; }";
-    const cfhide = () => document.head.appendChild(style);
-    const cfshow = () => style.remove();
-    cfhide();
-    setTimeout(cfshow, 2000);
-    document.addEventListener("everloop:show", cfshow);
-    window.EFQ = window.EFQ || [];
-    window.EFQ.push({
-      config: {
-        projectId: "ArvwzHsm3emGap3T",
-      },
-    });
-    </script>
-    <script async src="https://cdn-prod.geteverloop.com/everloop.min.js?project_id=ArvwzHsm3emGap3T"></script>
+<!-- Everloop SDK Loader --> 
+<link
+    id="everloop-sdk-preload"
+    rel="preload"
+    href="https://cdn-dev.geteverloop.com/everloop.min.js?project_id=XHM5OlQbCwsAK0CI"
+    as="script"
+/>
+<script id="everloop-sdk-loader">
+    (function (w, d, s, p) {
+    var st = d.createElement(s);st.innerHTML = "body{opacity:0!important;}";var h = function () {d.head.appendChild(st);},sh = function () {st.remove();};h();setTimeout(sh, 2e3);d.addEventListener("everloop:show", sh);
+    w.EFQ = w.EFQ || [];
+    w.EFQ.push({ config: { projectId: p } });
+    var j = d.createElement("script");
+    j.src = "https://cdn-dev.geteverloop.com/everloop.min.js?project_id=" + p;
+    j.async = 1;
+    d.head.appendChild(j);
+    })(window, document, "style", "XHM5OlQbCwsAK0CI");
+</script>
+<!-- Ends Everloop SDK Loader -->
     <!-- favicon -->
     <link rel="shortcut icon" href="plugin/favicon.png">
 
